@@ -58,6 +58,9 @@ function Home() {
   const showPlaceholder =
     !loading && !error && countries.length === 0 && !query.trim()
 
+  const showRegionEmpty =
+    !loading && !error && countries.length > 0 && displayed.length === 0
+
   return (
     <div className="home">
       <SearchBar query={query} onQueryChange={setQuery} />
@@ -75,7 +78,11 @@ function Home() {
         <p className="home__status home__status--error">{error}</p>
       )}
 
-      {!loading && !error && countries.length > 0 && (
+      {showRegionEmpty && (
+        <p className="home__status">No countries found for this region.</p>
+      )}
+
+      {!loading && !error && displayed.length > 0 && (
         <div className="cards-grid">
           {displayed.map((country) => (
             <CountryCard key={country.cca3} country={country} />

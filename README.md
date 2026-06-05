@@ -1,55 +1,54 @@
 # CountryPeek
 
-A React application for searching countries, browsing summaries, and exploring detailed country data. Built incrementally across six parts as part of the Kalvium React curriculum.
+A React application for searching and exploring country data, powered by the [RestCountries API](https://restcountries.com/).
 
-## Part 1 — Project setup and app shell
+Search countries by name, filter by region, sort results, view detailed profiles, save favourites, and switch between light and dark themes — all in the browser.
 
-- Vite + React (JavaScript)
-- React Router with Home, placeholder routes, and 404 page
-- Header navigation, controlled search input on Home
-- Folder structure prepared for later parts
+## Live Demo
 
-## Part 2 — API integration and country cards
+**https://nambirajang-19.github.io/country-peek/**
 
-- RestCountries API with debounced search (400ms)
-- Loading and error states on Home
-- Responsive `CountryCard` grid (flag, name, population, region, capital)
+## Features
 
-## Part 3 — Country detail page
+- Live country search with debounced API requests
+- Filter by region and sort by name or population
+- Full country detail pages (languages, currencies, borders)
+- Dark and light theme toggle (persists across pages)
+- Save countries to a Favourites list (localStorage)
+- Responsive layout for mobile screens
+- Keyboard-accessible controls with ARIA labels
 
-- `useCountry` custom hook (fetch by alpha code)
-- Full country profile at `/country/:code`
-- Languages, currencies, border badges, back navigation
+## Tech Stack
 
-## Part 4 — Filter, sort, and theme
+- React 19
+- Vite
+- React Router v7
+- React Context API (`ThemeContext`, `FavouritesContext`)
+- `useReducer` + `localStorage`
+- CSS Custom Properties
+- [RestCountries API](https://restcountries.com/)
 
-- `ThemeContext` with dark/light toggle (CSS variables on `body`)
-- Region filter and sort controls on Home
-- `FilterBar` component; derived `displayed` list (no extra state)
-
-## Part 5 — Favourites
-
-- `FavouritesContext` with `useReducer` (add / remove)
-- Save toggle on each `CountryCard`; list on `/favourites`
-- Persisted in `localStorage`
-
-## Getting started
+## Run Locally
 
 ```bash
+git clone https://github.com/NambiRajanG-19/country-peek.git
+cd country-peek
 npm install
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+Open [http://localhost:5173/country-peek/](http://localhost:5173/country-peek/) in your browser.
 
-## Tech stack
+## Build & Deploy (GitHub Pages)
 
-- [React](https://react.dev/)
-- [Vite](https://vite.dev/)
-- [React Router](https://reactrouter.com/)
-- [RestCountries API](https://restcountries.com/) (from Part 2 onward)
+```bash
+npm run build
+npm run deploy
+```
 
-## Branch workflow
+Repository Settings → **Pages** → Source: branch `gh-pages`, folder `/ (root)`.
+
+## Branch Workflow
 
 | Part | Branch |
 |------|--------|
@@ -61,3 +60,17 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 | 6 | `part-6/polish-deploy` |
 
 Work on the part branch, open a PR into `main`, and leave the PR open for review.
+
+## Project Structure
+
+```
+src/
+├── components/   # Header, SearchBar, CountryCard, FilterBar
+├── context/      # ThemeContext, FavouritesContext
+├── hooks/        # useCountry
+├── pages/        # Home, CountryPage, Favourites, NotFound
+├── styles/       # index.css (tokens), App.css (components)
+└── App.jsx       # Router setup
+```
+
+Built incrementally across six parts as part of the Kalvium React curriculum.
