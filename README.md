@@ -9,6 +9,24 @@ A React application for searching countries, browsing summaries, and exploring d
 - Header navigation, controlled search input on Home
 - Folder structure prepared for later parts
 
+## Part 2 — API integration and country cards
+
+- RestCountries API with debounced search (400ms)
+- Loading and error states on Home
+- Responsive `CountryCard` grid (flag, name, population, region, capital)
+
+## Part 3 — Country detail page
+
+- `useCountry` custom hook (fetch by alpha code)
+- Full country profile at `/country/:code`
+- Languages, currencies, border badges, back navigation
+
+## Part 4 — Filter, sort, and theme
+
+- `ThemeContext` with dark/light toggle (CSS variables on `body`)
+- Region filter and sort controls on Home
+- `FilterBar` component; derived `displayed` list (no extra state)
+
 ## Getting started
 
 ```bash
