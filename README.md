@@ -9,6 +9,12 @@ A React application for searching countries, browsing summaries, and exploring d
 - Header navigation, controlled search input on Home
 - Folder structure prepared for later parts
 
+## Part 2 — API integration and country cards
+
+- RestCountries API with debounced search (400ms)
+- Loading and error states on Home
+- Responsive `CountryCard` grid (flag, name, population, region, capital)
+
 ## Getting started
 
 ```bash
