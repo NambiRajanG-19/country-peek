@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
 import useCountry from '../hooks/useCountry'
 import '../styles/App.css'
 
@@ -87,9 +87,13 @@ function CountryPage() {
               </p>
               <div className="country-page__border-badges">
                 {borders.map((borderCode) => (
-                  <span key={borderCode} className="border-badge">
+                  <Link
+                    key={borderCode}
+                    to={`/country/${borderCode}`}
+                    className="border-badge"
+                  >
                     {borderCode}
-                  </span>
+                  </Link>
                 ))}
               </div>
             </div>

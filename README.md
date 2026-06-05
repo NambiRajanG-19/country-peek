@@ -21,6 +21,12 @@ A React application for searching countries, browsing summaries, and exploring d
 - Full country profile at `/country/:code`
 - Languages, currencies, border badges, back navigation
 
+## Part 4 — Filter, sort, and theme
+
+- `ThemeContext` with dark/light toggle (CSS variables on `body`)
+- Region filter and sort controls on Home
+- `FilterBar` component; derived `displayed` list (no extra state)
+
 ## Getting started
 
 ```bash
