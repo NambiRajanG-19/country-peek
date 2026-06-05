@@ -15,6 +15,12 @@ A React application for searching countries, browsing summaries, and exploring d
 - Loading and error states on Home
 - Responsive `CountryCard` grid (flag, name, population, region, capital)
 
+## Part 3 — Country detail page
+
+- `useCountry` custom hook (fetch by alpha code)
+- Full country profile at `/country/:code`
+- Languages, currencies, border badges, back navigation
+
 ## Getting started
 
 ```bash
