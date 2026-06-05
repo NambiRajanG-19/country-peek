@@ -142,6 +142,64 @@
   color: var(--text-label);
 }
 
+.fav-btn {
+  display: block;
+  margin-top: 0.75rem;
+  padding: 0.35rem 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.fav-btn:hover {
+  color: var(--text);
+}
+
+.fav-btn--saved {
+  color: #dc2626;
+}
+
+[data-theme='dark'] .fav-btn--saved {
+  color: #f87171;
+}
+
+.favourites-page {
+  padding: 0 2rem 2rem;
+}
+
+.favourites-page__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.favourites-empty {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.favourites-empty h2 {
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.favourites-empty p {
+  margin-bottom: 1.5rem;
+  color: var(--text-muted);
+}
+
+.favourites-empty a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.favourites-empty a:hover {
+  text-decoration: underline;
+}
+
 .not-found {
   padding: 3rem 2rem;
   text-align: center;

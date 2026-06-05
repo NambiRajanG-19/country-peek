@@ -27,6 +27,12 @@ A React application for searching countries, browsing summaries, and exploring d
 - Region filter and sort controls on Home
 - `FilterBar` component; derived `displayed` list (no extra state)
 
+## Part 5 — Favourites
+
+- `FavouritesContext` with `useReducer` (add / remove)
+- Save toggle on each `CountryCard`; list on `/favourites`
+- Persisted in `localStorage`
+
 ## Getting started
 
 ```bash
